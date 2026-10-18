@@ -1,0 +1,11 @@
+{
+  "name": "Shaan Khan — Agentic & Robotic AI Trainer",
+  "short_name": "Shaan Khan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#b4471c",
+  "icons": [
+    { "src": "/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
