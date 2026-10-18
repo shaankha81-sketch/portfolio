@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shaankhan.pages.dev/sitemap.xml
+Sitemap: https://shaan.shaankha81.workers.dev/sitemap.xml
