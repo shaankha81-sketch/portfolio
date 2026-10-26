@@ -1,0 +1,218 @@
+{
+  "built_utc": "2026-10-26T14:34:51Z",
+  "names_reviewed_by_owner": false,
+  "tools": {
+    "shapely": "2.2.0",
+    "pyproj": "3.8.0",
+    "pyshp": "3.1.6"
+  },
+  "layers": {
+    "districts-2011": {
+      "description": "Rajasthan districts as in Census 2011 (33 districts)",
+      "features": 33,
+      "source": "DataMeet India community, Districts/Census_2011/2011_Dist.shp",
+      "source_url": "https://github.com/datameet/maps/tree/master/Districts/Census_2011",
+      "licence": "Creative Commons Attribution 2.5 India",
+      "source_sha256": "3636e627a519f67b4615b6a97df48c2b279e8c7b2566d3bfbc3eda1d06e33206"
+    },
+    "context-states": {
+      "description": "Neighbouring states (Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Gujarat), drawn for context only",
+      "features": 5,
+      "source": "same file as above, districts dissolved into states"
+    }
+  },
+  "processing": {
+    "simplify_degrees": 0.006,
+    "coordinate_decimals": 4,
+    "adjacency_snap_degrees": 0.003,
+    "min_shared_border_km": 3.0,
+    "min_international_stretch_km": 20.0,
+    "measurements_from": "original unsimplified geometry (WGS84 geodesic)"
+  },
+  "checks": {
+    "source_is_clean_tiling": false,
+    "source_invalid_edge_km_districts": 37.6,
+    "source_note": "DataMeet polygons overlap slightly in places (largest: Alwar/Dausa, about 5.5 km2 of 342,469); no gaps. Edges that are not shared exactly are left unsimplified.",
+    "total_area_km2_original": 342469,
+    "total_area_km2_simplified": 342477,
+    "simplification_area_change_percent": 0.002,
+    "international_border_km_computed": 1036,
+    "all_simplified_geometries_valid": true
+  },
+  "current_list": {
+    "source": {
+      "title": "List of districts of Rajasthan",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_of_Rajasthan",
+      "publisher": "Wikipedia",
+      "licence": "CC BY-SA 4.0",
+      "revision_id": 1381020334,
+      "revision_timestamp": "2026-10-19T14:04:15Z",
+      "retrieved_utc": "2026-10-26T14:34:36Z",
+      "list_date_stated_by_page": "30 December 2024",
+      "stated_counts": {
+        "districts": 41,
+        "divisions": 7
+      }
+    },
+    "counts": {
+      "total": 41,
+      "continuing": 33,
+      "new_since_2011": 8
+    },
+    "divisions": {
+      "Ajmer": [
+        "Ajmer",
+        "Beawar",
+        "Bhilwara",
+        "Didwana-Kuchaman",
+        "Nagaur",
+        "Tonk"
+      ],
+      "Bharatpur": [
+        "Bharatpur",
+        "Deeg",
+        "Dholpur",
+        "Karauli",
+        "Sawai Madhopur"
+      ],
+      "Bikaner": [
+        "Bikaner",
+        "Churu",
+        "Hanumangarh",
+        "Sri Ganganagar"
+      ],
+      "Jaipur": [
+        "Alwar",
+        "Dausa",
+        "Jaipur",
+        "Jhunjhunu",
+        "Khairthal-Tijara",
+        "Kotputli-Behror",
+        "Sikar"
+      ],
+      "Jodhpur": [
+        "Balotra",
+        "Barmer",
+        "Jaisalmer",
+        "Jalore",
+        "Jodhpur",
+        "Pali",
+        "Phalodi",
+        "Sirohi"
+      ],
+      "Kota": [
+        "Baran",
+        "Bundi",
+        "Jhalawar",
+        "Kota"
+      ],
+      "Udaipur": [
+        "Banswara",
+        "Chittorgarh",
+        "Dungarpur",
+        "Pratapgarh",
+        "Rajsamand",
+        "Salumbar",
+        "Udaipur"
+      ]
+    },
+    "new_districts": [
+      {
+        "id": "balotra",
+        "name": {
+          "en": "Balotra",
+          "hi": "बालोतरा",
+          "ur": "بالوترا"
+        },
+        "division_id": "jodhpur"
+      },
+      {
+        "id": "beawar",
+        "name": {
+          "en": "Beawar",
+          "hi": "ब्यावर",
+          "ur": "بیاور"
+        },
+        "division_id": "ajmer"
+      },
+      {
+        "id": "deeg",
+        "name": {
+          "en": "Deeg",
+          "hi": "डीग",
+          "ur": "ڈیگ"
+        },
+        "division_id": "bharatpur"
+      },
+      {
+        "id": "didwana-kuchaman",
+        "name": {
+          "en": "Didwana-Kuchaman",
+          "hi": "डीडवाना-कुचामन",
+          "ur": "ڈیڈوانہ-کچامن"
+        },
+        "division_id": "ajmer"
+      },
+      {
+        "id": "khairthal-tijara",
+        "name": {
+          "en": "Khairthal-Tijara",
+          "hi": "खैरथल-तिजारा",
+          "ur": "کھیرتھل-تیجارا"
+        },
+        "division_id": "jaipur"
+      },
+      {
+        "id": "kotputli-behror",
+        "name": {
+          "en": "Kotputli-Behror",
+          "hi": "कोटपूतली-बहरोड़",
+          "ur": "کوٹپتلی-بہرور"
+        },
+        "division_id": "jaipur"
+      },
+      {
+        "id": "phalodi",
+        "name": {
+          "en": "Phalodi",
+          "hi": "फलोदी",
+          "ur": "پھلودی"
+        },
+        "division_id": "jodhpur"
+      },
+      {
+        "id": "salumbar",
+        "name": {
+          "en": "Salumbar",
+          "hi": "सलूंबर",
+          "ur": "سلومبر"
+        },
+        "division_id": "udaipur"
+      }
+    ],
+    "data_quality": [
+      "identical claimed area 8,481 km2 for Ajmer and Beawar",
+      "identical claimed population 1,605,543 for Nagaur and Pali",
+      "infobox says area smallest is Dholpur (3,084) but the table gives Khairthal-Tijara (2,007) and Dholpur (3,084)",
+      "infobox says population lowest is Jaisalmer (669,919) but the table gives Salumbar (570,775) and Jaisalmer (669,919)",
+      "infobox says population highest is Jaipur (6,626,178) but the table gives Jaipur (6,046,835) and Jaipur (6,046,835)",
+      "the page names no source or census year for the area and population columns"
+    ],
+    "trust": {
+      "used": [
+        "district list",
+        "division of each district",
+        "official district websites"
+      ],
+      "kept_but_not_used": [
+        "area_km2_claimed",
+        "population_claimed"
+      ],
+      "reason": "no source or year named; internal contradictions (see data_quality)"
+    }
+  },
+  "size_bytes": {
+    "districts-2011.geojson": 192288,
+    "context-states.geojson": 97991
+  }
+}
