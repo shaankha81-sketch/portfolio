@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RajAtlas | Geographic atlas of Rajasthan</title>
+  <meta name="description" content="An interactive geographic atlas of Rajasthan: district boundaries, area, shape, neighbours and borders, measured from Census 2011 data. English, Hindi and Urdu.">
+  <meta name="author" content="Shaan Khan">
+  <meta name="theme-color" content="#f6f1e7">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/boot.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./" aria-label="RajAtlas, home">
+        <img src="assets/favicon.svg" alt="" width="34" height="34">
+        <span class="brand-text"><b>RajAtlas</b><small data-i18n="brand.sub">Geographic atlas of Rajasthan</small></span>
+      </a>
+      <div class="controls">
+        <a class="back" href="https://shaan.shaankha81.workers.dev/" data-i18n="back">Portfolio</a>
+        <label class="visually-hidden" for="lang">Language</label>
+        <select id="lang" class="select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ur">اردو</option>
+        </select>
+        <button id="theme" class="icon-btn" type="button" aria-label="Switch between light and dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro wrap">
+      <p class="badge" data-i18n="badge">Phase 1 · work in progress</p>
+      <h1 data-i18n="hero.h1">Explore Rajasthan, district by district</h1>
+      <p class="lede" data-i18n="hero.lead">This is the first phase of a larger atlas of Rajasthan. Colour the map by a measured property, pick a district, and see its size, shape and neighbours. Population, farming, climate, culture and travel distances will be added in later phases.</p>
+      <noscript><p class="note">The map needs JavaScript. The district data is in assets/data/districts-2011.geojson.</p></noscript>
+    </section>
+
+    <section class="atlas wrap" aria-labelledby="map-title">
+      <div class="map-col">
+        <div class="map-head">
+          <h2 id="map-title" data-i18n="map.title">Districts of Rajasthan, Census 2011 boundaries</h2>
+          <div class="ctrl">
+            <label for="layer" data-i18n="layer.label">Colour the map by</label>
+            <select id="layer" class="select">
+              <option value="area" data-i18n="layer.area">Area (km²)</option>
+              <option value="perim" data-i18n="layer.perim">Boundary length (km)</option>
+              <option value="compact" data-i18n="layer.compact">Shape compactness</option>
+              <option value="nbrs" data-i18n="layer.nbrs">Neighbouring districts</option>
+              <option value="border" data-i18n="layer.border">Type of border</option>
+            </select>
+          </div>
+        </div>
+        <div class="map-frame" id="map-frame">
+          <canvas id="map" role="img" aria-label="Map of Rajasthan's districts"></canvas>
+          <div id="tip" class="tip" role="presentation" hidden></div>
+        </div>
+        <div id="legend" class="legend"></div>
+        <p id="status" class="visually-hidden" role="status" aria-live="polite"></p>
+        <p id="load-error" class="note error" role="alert" hidden data-i18n="load.error">The map data could not be loaded. Please reload the page.</p>
+      </div>
+
+      <aside class="side-col">
+        <div class="card" id="panel" aria-label="District details"></div>
+        <div class="card">
+          <label class="field-label" for="search" data-i18n="search.label">Find a district</label>
+          <input id="search" class="input" type="search" autocomplete="off" placeholder="Type a name" data-i18n-ph="search.ph">
+          <ul id="list" class="dlist" aria-label="All districts"></ul>
+          <p id="list-none" class="note" hidden data-i18n="list.none">No district matches.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="behind wrap" aria-labelledby="bm-title">
+      <h2 id="bm-title" data-i18n="bm.title">Behind the map</h2>
+      <div class="behind-grid">
+        <div class="card">
+          <h3 data-i18n="bm.method">How the numbers were made</h3>
+          <ul class="plain">
+            <li data-i18n="m1">Boundaries come from the Census 2011 district map published by the DataMeet community.</li>
+            <li data-i18n="m2">Area and boundary length are measured on the WGS84 ellipsoid from the full-detail shapes. The shapes drawn here are simplified for the screen.</li>
+            <li data-i18n="m3">The map uses an Albers equal-area conic projection, so colour comparisons between districts are fair.</li>
+            <li data-i18n="m4">Neighbours and borders are found by comparing each district outline with the others, then checked by a separate program.</li>
+          </ul>
+          <dl class="facts" id="numbers"></dl>
+        </div>
+        <div class="card">
+          <h3 data-i18n="lim.title">Known limits</h3>
+          <ul class="plain">
+            <li data-i18n="l1">These are the Census 2011 boundaries. Rajasthan’s district map has changed since; the current layout is added in a later phase.</li>
+            <li data-i18n="l2">The source outlines overlap in a few places (largest: Alwar and Dausa, about 5.5 km²). This is reported here, not hidden.</li>
+            <li id="l3" data-i18n="l3">Hindi and Urdu district names are drafts and have not yet been reviewed.</li>
+          </ul>
+        </div>
+        <div class="card" id="today">
+          <h3 data-i18n="cur.title">Districts today</h3>
+          <p id="cur-lead"></p>
+          <ul id="cur-new" class="chips"></ul>
+          <p id="cur-note" class="note"></p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="sk.title">What this build uses</h3>
+          <dl class="skills">
+            <div><dt data-i18n="sk1.t">Geography</dt><dd data-i18n="sk1.d">Equal-area conic projection, choropleth classes, shape index, borders and adjacency</dd></div>
+            <div><dt data-i18n="sk2.t">Maths and statistics</dt><dd data-i18n="sk2.d">Geodesic area, quantile classes, ratios, and checks against a known total</dd></div>
+            <div><dt data-i18n="sk3.t">Programming</dt><dd data-i18n="sk3.d">Python (shapely, pyproj) for the data build, plain JavaScript and canvas for the map, automatic checks</dd></div>
+            <div><dt data-i18n="sk4.t">Languages</dt><dd data-i18n="sk4.d">English, Hindi and Urdu interface, including right-to-left layout</dd></div>
+            <div><dt data-i18n="sk5.t">AI-training habits</dt><dd data-i18n="sk5.d">Every result is checked independently and the known limits are written down</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><p data-i18n="credit">Boundary data: DataMeet India community, CC BY 2.5 India. Project by Shaan Khan.</p><p id="credit2"></p><a class="foot-link" href="https://shaan.shaankha81.workers.dev/" data-i18n="back">Portfolio</a></div>
+  </footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/map.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

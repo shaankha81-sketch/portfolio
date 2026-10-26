@@ -68,6 +68,7 @@
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#lab" data-i18n="nav.lab">Lab</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
         <a href="#try" data-i18n="nav.try">Try it</a>
         <a href="#education" data-i18n="nav.education">Education</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -231,10 +232,42 @@
       </div>
     </section>
 
-    <!-- TRY IT -->
-    <section id="try" class="section alt">
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
       <div class="wrap">
-        <p class="kicker"><span class="mono">04</span><span data-i18n="try.kicker">Try it</span></p>
+        <p class="kicker"><span class="mono">04</span><span data-i18n="projects.kicker">Projects</span></p>
+        <h2 data-i18n="projects.title">What I have built</h2>
+        <p class="section-lead" data-i18n="projects.lead">Larger work that goes beyond the lab tools. Each project opens on its own page and is built in checked stages.</p>
+
+        <article class="card project" data-k="1" aria-labelledby="ra-title">
+          <div class="project-shot">
+            <img class="shot-light" src="assets/img/rajatlas-light.webp" alt="" width="705" height="645" loading="lazy">
+            <img class="shot-dark" src="assets/img/rajatlas-dark.webp" alt="" width="705" height="645" loading="lazy">
+          </div>
+          <div class="project-body">
+            <p class="pill" data-i18n="ra.status">Phase 1 · work in progress</p>
+            <h3 id="ra-title" data-i18n="ra.title">RajAtlas: a geographic atlas of Rajasthan</h3>
+            <p data-i18n="ra.desc">An interactive map of Rajasthan's districts. Colour it by area, boundary length, shape, neighbours or border type, then open any district to see its size, neighbours, borders with other states and Pakistan, and its division. Built in English, Hindi and Urdu.</p>
+            <ul class="project-facts">
+              <li data-i18n="ra.f1">33 districts from the Census 2011 map, with area measured on the ellipsoid</li>
+              <li data-i18n="ra.f2">Divisions from today's list of 41 districts (Wikipedia, CC BY-SA)</li>
+              <li data-i18n="ra.f3">Equal-area map projection, so colours compare fairly</li>
+              <li data-i18n="ra.f4">Every number traced to a named source; 17 data checks and 57 browser tests, all passing</li>
+            </ul>
+            <p class="muted small" data-i18n="ra.tech">Built with plain JavaScript and a Python data pipeline.</p>
+            <p class="muted small" data-i18n="ra.next">Next: Census 2011 population, districts through time, distances and travel links, climate and farming.</p>
+            <div class="cta">
+              <a class="btn primary" href="projects/rajatlas/" data-i18n="ra.open">Open RajAtlas</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRY IT -->
+    <section id="try" class="section">
+      <div class="wrap">
+        <p class="kicker"><span class="mono">05</span><span data-i18n="try.kicker">Try it</span></p>
         <h2 data-i18n="try.title">Quick checks</h2>
         <p class="section-lead" data-i18n="try.lead">Fresh questions from my subjects on every visit. A wrong pick shows a hint, not the answer. Nothing is stored.</p>
         <div class="deck-bar">
@@ -246,18 +279,18 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="section">
+    <section id="education" class="section alt">
       <div class="wrap">
-        <p class="kicker"><span class="mono">05</span><span data-i18n="edu.kicker">Education</span></p>
+        <p class="kicker"><span class="mono">06</span><span data-i18n="edu.kicker">Education</span></p>
         <h2 data-i18n="edu.title">Where I have studied</h2>
         <ol class="timeline" id="timeline"></ol>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section alt">
+    <section id="contact" class="section">
       <div class="wrap">
-        <p class="kicker"><span class="mono">06</span><span data-i18n="contact.kicker">Contact</span></p>
+        <p class="kicker"><span class="mono">07</span><span data-i18n="contact.kicker">Contact</span></p>
         <h2 data-i18n="contact.title">Let's talk</h2>
         <p class="section-lead" data-i18n="contact.lead">Working on an AI training, annotation or evaluation project? Email is the fastest way to reach me. I reply in English, Hindi or Urdu.</p>
 
