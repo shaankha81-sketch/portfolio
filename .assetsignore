@@ -3,3 +3,4 @@ wrangler.jsonc
 .gitignore
 .git
 node_modules
+.wrangler
