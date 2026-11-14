@@ -631,9 +631,9 @@
      Tabs
      ===================================================================== */
   var TOOLS = [
+    { id: 'rev', key: 'lab.t3', k: 6, make: ReviewTool },
     { id: 'proj', key: 'lab.t1', k: 1, make: ProjectionTool },
-    { id: 'trav', key: 'lab.t2', k: 2, make: TraverseTool },
-    { id: 'rev', key: 'lab.t3', k: 6, make: ReviewTool }
+    { id: 'trav', key: 'lab.t2', k: 2, make: TraverseTool }
   ];
   var current = 0;
 

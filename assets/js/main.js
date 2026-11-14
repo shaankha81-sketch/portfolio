@@ -362,11 +362,31 @@
     });
   }
 
+  /* ---------------- Projects ---------------- */
+  function renderProjects() {
+    var host = $('#project-grid');
+    host.textContent = '';
+    S.projects.forEach(function (p) {
+      var links = p.links.map(function (l) {
+        return el('a', { class: 'btn small', href: l.url, target: '_blank', rel: 'noopener noreferrer', text: L(l.label) + ' ↗' });
+      });
+      host.appendChild(el('article', { class: 'card proj', 'data-k': p.k }, [
+        el('h3', { text: L(p.name) }),
+        el('p', { class: 'proj-tag', text: L(p.tag) }),
+        el('p', { text: L(p.body) }),
+        el('span', { class: 'block-label', text: t('projects.stack') }),
+        el('ul', { class: 'chips ltr' }, p.stack.map(function (x) { return el('li', { text: x }); })),
+        el('div', { class: 'cta proj-links' }, links)
+      ]));
+    });
+  }
+
   renderAtlasTabs(); showAtlas(0);
   renderCourseMap();
   renderEducation();
   renderProfiles();
-  window.APP.onLang(function () { renderAtlasTabs(); showAtlas(atlasIdx); renderCourseMap(); renderEducation(); });
+  renderProjects();
+  window.APP.onLang(function () { renderAtlasTabs(); showAtlas(atlasIdx); renderCourseMap(); renderEducation(); renderProjects(); });
 
   /* ---------------- Contact ---------------- */
   var EMAIL = $('#email-link').textContent.trim();

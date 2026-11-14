@@ -1,4 +1,5 @@
-/* Quick checks: three random question cards. A wrong pick shows a hint; the right one shows the explanation. */
+/* Quick checks: three random question cards, two of them C++ and one from my academic subjects.
+   A wrong pick shows a hint; the right one shows the explanation. */
 (function () {
   'use strict';
 
@@ -7,17 +8,25 @@
   var deck = $('#deck'), scoreEl = $('#score');
   if (!deck) return;
 
-  var KEYS = { geo: 1, map: 2, stat: 3, soc: 5 };
+  var KEYS = { cpp: 1, geo: 1, map: 2, stat: 3, soc: 5 };
   var used = [];
   var stats = { solved: 0, first: 0 };
 
-  function pick() {
+  function isCpp(i) { return S.quiz[i].cat === 'cpp'; }
+
+  // Draws a C++ question (wantCpp) or an academic one, never one already on the table
+  function pick(wantCpp) {
     var onTable = Array.prototype.map.call(deck.children, function (c) { return Number(c.getAttribute('data-q')); });
     var free = [];
-    S.quiz.forEach(function (_, i) { if (used.indexOf(i) === -1 && onTable.indexOf(i) === -1) free.push(i); });
-    if (!free.length) {                       // all shown: start a new round, never repeating a card on the table
-      used = [];
-      S.quiz.forEach(function (_, i) { if (onTable.indexOf(i) === -1) free.push(i); });
+    function collect(skipUsed) {
+      S.quiz.forEach(function (_, i) {
+        if (isCpp(i) === wantCpp && onTable.indexOf(i) === -1 && (!skipUsed || used.indexOf(i) === -1)) free.push(i);
+      });
+    }
+    collect(true);
+    if (!free.length) {                       // all of this kind shown: start a new round, never repeating a card on the table
+      used = used.filter(function (i) { return isCpp(i) !== wantCpp; });
+      collect(false);
     }
     var idx = free[Math.floor(Math.random() * free.length)];
     used.push(idx);
@@ -44,7 +53,7 @@
     actions.appendChild(skip);
 
     function next() {
-      var fresh = makeCard(pick());
+      var fresh = makeCard(pick(isCpp(qi)));
       deck.replaceChild(fresh, card);
       var first = $('.opt', fresh);
       if (first) first.focus({ preventScroll: true });
@@ -90,7 +99,7 @@
 
   function deal() {
     deck.textContent = '';
-    for (var i = 0; i < 3; i++) deck.appendChild(makeCard(pick()));
+    [true, true, false].forEach(function (cpp) { deck.appendChild(makeCard(pick(cpp))); });
   }
 
   $('#shuffle').addEventListener('click', deal);

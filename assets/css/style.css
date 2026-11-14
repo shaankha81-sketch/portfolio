@@ -371,6 +371,36 @@ p { margin: 0 0 1em; }
 .lost h1 { font-size: clamp(2.6rem, 8vw, 5rem); margin: 10px 0; }
 .lost .mono { color: var(--accent); }
 
+/* ---------- C++ code window (always dark, like an editor) ---------- */
+.priority li:first-child { font-size: 1rem; }
+.codewin { margin: 0 0 12px; max-width: 880px; background: #10181b; color: #e6e1d6; border: 1px solid #283a3e; border-top: 4px solid var(--k); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); direction: ltr; text-align: left; }
+.codewin-bar { display: flex; align-items: center; gap: 14px; padding: 10px 16px; background: #18242a; border-bottom: 1px solid #283a3e; color: #a3ab9f; font-size: .8rem; }
+.dots { display: inline-flex; gap: 6px; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: #3b4d52; }
+.codewin pre { margin: 0; padding: 18px 20px; overflow-x: auto; font: 400 .86rem/1.7 var(--mono); tab-size: 4; }
+.codewin code { font: inherit; }
+.tk-k { color: #f0895a; } .tk-t { color: #5cc8ff; } .tk-s { color: #a3d65c; } .tk-n { color: #f5c451; } .tk-p { color: #c9a6ff; }
+.tk-c { color: #8a9a95; font-style: italic; }
+.codeout { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding: 12px 20px 16px; border-top: 1px dashed #283a3e; background: #0c1315; }
+.out-label { font: 600 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: #8a9a95; }
+.codeout samp { font: 600 .9rem var(--mono); color: #a3d65c; }
+.cpp-note { max-width: 880px; margin-bottom: 36px; }
+.cpp-why .pillar h4 { margin-top: 0; }
+
+/* ---------- Projects ---------- */
+.proj { display: flex; flex-direction: column; border-top: 4px solid var(--k); }
+.proj h3 { margin: 0 0 4px; font-size: 1.3rem; }
+.proj-tag { margin: 0 0 14px; color: var(--k); font-size: .85rem; font-weight: 700; letter-spacing: .04em; }
+.proj p { color: var(--text); font-size: .96rem; }
+.proj .block-label { margin-top: 6px; }
+.proj-links { margin-top: auto; padding-top: 18px; }
+:lang(ur) .proj-tag { letter-spacing: 0; }
+
+/* ---------- B.A. course map, tucked away under Education ---------- */
+.coursemap { margin-top: 28px; padding: 14px 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.coursemap summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; }
+.coursemap[open] summary { margin-bottom: 8px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1060px) {
   .nav a { padding: 8px 10px; }
