@@ -3,5 +3,5 @@
   "name": "shaan",
   "compatibility_date": "2026-11-02",
   "observability": { "enabled": true },
-  "assets": { "directory": "." }
+  "assets": { "directory": ".", "not_found_handling": "404-page" }
 }
