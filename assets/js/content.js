@@ -19,8 +19,8 @@ window.SITE = {
     'hero.place': { hi: 'भरतपुर, राजस्थान', ur: 'بھرت پور، راجستھان' },
     'hero.role': { hi: 'एजेंटिक और रोबोटिक AI ट्रेनर', ur: 'ایجنٹک اور روبوٹک اے آئی ٹرینر' },
     'hero.summary': {
-      hi: 'मैं एक एजेंटिक और रोबोटिक AI ट्रेनर हूँ और मेरी कोडिंग भाषा C++ है। मैं C++ में समस्याएँ हल करता हूँ और डेटा स्ट्रक्चर का अभ्यास HackerRank और LeetCode पर करता हूँ; प्रोजेक्ट्स के लिए Python और JavaScript इस्तेमाल करता हूँ। मैं जाँचता हूँ कि AI प्रणालियाँ कैसे उत्तर देती हैं, तर्क करती हैं और योजना बनाती हैं, ठीक वह चरण ढूँढता हूँ जहाँ वे ग़लती करती हैं, और हर रेटिंग का कारण लिखता हूँ। साथ ही मैं महाराजा सूरजमल बृज विश्वविद्यालय, भरतपुर में B.A. अंतिम वर्ष का छात्र हूँ।',
-      ur: 'میں ایک ایجنٹک اور روبوٹک اے آئی ٹرینر ہوں اور میری کوڈنگ زبان C++ ہے۔ میں C++ میں مسائل حل کرتا ہوں اور ڈیٹا اسٹرکچر کی مشق HackerRank اور LeetCode پر کرتا ہوں؛ پروجیکٹس کے لیے Python اور JavaScript استعمال کرتا ہوں۔ میں جانچتا ہوں کہ اے آئی نظام کیسے جواب دیتے ہیں، استدلال کرتے ہیں اور منصوبہ بناتے ہیں، ٹھیک وہ مرحلہ ڈھونڈتا ہوں جہاں وہ غلطی کرتے ہیں، اور ہر ریٹنگ کی وجہ لکھتا ہوں۔ ساتھ ہی میں مہاراجہ سورج مل برج یونیورسٹی، بھرت پور میں بی اے آخری سال کا طالب علم ہوں۔'
+      hi: 'मैं एक एजेंटिक और रोबोटिक AI ट्रेनर हूँ और मेरी कोडिंग भाषा C++ है, उसके बाद SQL। मैं C++ में समस्याएँ हल करता हूँ और डेटा स्ट्रक्चर का अभ्यास HackerRank और LeetCode पर करता हूँ; मेरे पास तीन HackerRank SQL प्रमाणपत्र हैं (Basic, Intermediate, Advanced); प्रोजेक्ट्स के लिए Python और JavaScript इस्तेमाल करता हूँ। मैं जाँचता हूँ कि AI प्रणालियाँ कैसे उत्तर देती हैं, तर्क करती हैं और योजना बनाती हैं, ठीक वह चरण ढूँढता हूँ जहाँ वे ग़लती करती हैं, और हर रेटिंग का कारण लिखता हूँ। साथ ही मैं महाराजा सूरजमल बृज विश्वविद्यालय, भरतपुर में B.A. अंतिम वर्ष का छात्र हूँ।',
+      ur: 'میں ایک ایجنٹک اور روبوٹک اے آئی ٹرینر ہوں اور میری کوڈنگ زبان C++ ہے، اس کے بعد SQL۔ میں C++ میں مسائل حل کرتا ہوں اور ڈیٹا اسٹرکچر کی مشق HackerRank اور LeetCode پر کرتا ہوں؛ میرے پاس HackerRank کے تین SQL سرٹیفکیٹ ہیں (Basic، Intermediate، Advanced)؛ پروجیکٹس کے لیے Python اور JavaScript استعمال کرتا ہوں۔ میں جانچتا ہوں کہ اے آئی نظام کیسے جواب دیتے ہیں، استدلال کرتے ہیں اور منصوبہ بناتے ہیں، ٹھیک وہ مرحلہ ڈھونڈتا ہوں جہاں وہ غلطی کرتے ہیں، اور ہر ریٹنگ کی وجہ لکھتا ہوں۔ ساتھ ہی میں مہاراجہ سورج مل برج یونیورسٹی، بھرت پور میں بی اے آخری سال کا طالب علم ہوں۔'
     },
     'hero.resume': { hi: 'रिज़्यूमे डाउनलोड करें', ur: 'ریزیومے ڈاؤن لوڈ کریں' },
     'hero.contact': { hi: 'संपर्क करें', ur: 'رابطہ کریں' },
@@ -30,7 +30,7 @@ window.SITE = {
     'card.role': { hi: 'भूमिका', ur: 'کردار' },
     'card.roleV': { hi: 'एजेंटिक और रोबोटिक AI ट्रेनर', ur: 'ایجنٹک اور روبوٹک اے آئی ٹرینر' },
     'card.code': { hi: 'कोडिंग', ur: 'کوڈنگ' },
-    'card.codeV': { hi: 'C++ (मुख्य) · Python · JavaScript · Java', ur: 'C++ (بنیادی) · Python · JavaScript · Java' },
+    'card.codeV': { hi: 'C++ (मुख्य) · SQL · Python · JavaScript · Java', ur: 'C++ (بنیادی) · SQL · Python · JavaScript · Java' },
     'card.study': { hi: 'अध्ययन', ur: 'تعلیم' },
     'card.studyV': { hi: 'B.A., अंतिम वर्ष', ur: 'بی اے، آخری سال' },
     'card.uni': { hi: 'विश्वविद्यालय', ur: 'یونیورسٹی' },
@@ -38,9 +38,9 @@ window.SITE = {
     'card.lang': { hi: 'बोलता हूँ', ur: 'بولتا ہوں' },
     'card.time': { hi: 'स्थानीय समय', ur: 'مقامی وقت' },
 
-    'stat.langs': { hi: 'प्रोग्रामिंग भाषाएँ, C++ मुख्य', ur: 'پروگرامنگ زبانیں، C++ بنیادی' },
+    'stat.langs': { hi: 'कोडिंग भाषाएँ, C++ पहली', ur: 'کوڈنگ زبانیں، C++ پہلی' },
+    'stat.certs': { hi: 'HackerRank SQL प्रमाणपत्र', ur: 'HackerRank SQL سرٹیفکیٹ' },
     'stat.projects': { hi: 'GitHub पर सार्वजनिक प्रोजेक्ट', ur: 'GitHub پر عوامی پروجیکٹس' },
-    'stat.platforms': { hi: 'अभ्यास प्लेटफ़ॉर्म: HackerRank, LeetCode, Kaggle', ur: 'مشق کے پلیٹ فارم: HackerRank, LeetCode, Kaggle' },
     'stat.human': { hi: 'भाषाएँ जिनमें मैं काम करता हूँ', ur: 'وہ زبانیں جن میں میں کام کرتا ہوں' },
 
     'about.kicker': { hi: 'प्रोफ़ाइल', ur: 'پروفائل' },
@@ -50,8 +50,8 @@ window.SITE = {
       ur: 'میں ایجنٹک اور روبوٹک اے آئی ٹرینر کے طور پر کام کرتا ہوں اور C++ میری کوڈنگ زبان ہے: میں جانچتا ہوں کہ اے آئی نظام کیسے جواب دیتے ہیں، استدلال کرتے ہیں اور منصوبہ بناتے ہیں، اور ٹھیک ٹھیک بتاتا ہوں کہ وہ کہاں غلطی کرتے ہیں۔'
     },
     'about.p1': {
-      hi: 'C++ मेरी मुख्य प्रोग्रामिंग भाषा है। मैं इसमें HackerRank और LeetCode पर समस्या-समाधान और डेटा स्ट्रक्चर का अभ्यास करता हूँ, और प्रोजेक्ट्स के लिए Python व JavaScript इस्तेमाल करता हूँ, जैसे RajAtlas (राजस्थान का इंटरैक्टिव एटलस) और यह वेबसाइट।',
-      ur: 'C++ میری بنیادی پروگرامنگ زبان ہے۔ میں اس میں HackerRank اور LeetCode پر مسئلہ حل کرنے اور ڈیٹا اسٹرکچر کی مشق کرتا ہوں، اور پروجیکٹس کے لیے Python اور JavaScript استعمال کرتا ہوں، جیسے RajAtlas (راجستھان کا انٹرایکٹو اٹلس) اور یہ ویب سائٹ۔'
+      hi: 'C++ मेरी मुख्य प्रोग्रामिंग भाषा है, और SQL मेरी दूसरी मज़बूत भाषा, जिसके HackerRank पर मेरे पास तीन प्रमाणपत्र हैं (Basic, Intermediate, Advanced)। मैं HackerRank और LeetCode पर समस्या-समाधान और डेटा स्ट्रक्चर का अभ्यास करता हूँ, और प्रोजेक्ट्स के लिए Python व JavaScript इस्तेमाल करता हूँ, जैसे RajAtlas (राजस्थान का इंटरैक्टिव एटलस) और यह वेबसाइट।',
+      ur: 'C++ میری بنیادی پروگرامنگ زبان ہے، اور SQL میری دوسری مضبوط زبان، جس کے HackerRank پر میرے پاس تین سرٹیفکیٹ ہیں (Basic، Intermediate، Advanced)۔ میں HackerRank اور LeetCode پر مسئلہ حل کرنے اور ڈیٹا اسٹرکچر کی مشق کرتا ہوں، اور پروجیکٹس کے لیے Python اور JavaScript استعمال کرتا ہوں، جیسے RajAtlas (راجستھان کا انٹرایکٹو اٹلس) اور یہ ویب سائٹ۔'
     },
     'about.p2': {
       hi: 'मैं महाराजा सूरजमल बृज विश्वविद्यालय, भरतपुर से B.A. (भूगोल, समाजशास्त्र, राजनीति विज्ञान) के अंतिम वर्ष में हूँ। इस पृष्ठभूमि से मानचित्र, संख्याओं और स्रोतों पर मेरी नज़र बारीक रहती है। मैं अंग्रेज़ी, हिंदी और उर्दू पढ़-लिख सकता हूँ, इसलिए तीनों भाषाओं की सामग्री की समीक्षा कर सकता हूँ।',
@@ -99,12 +99,16 @@ window.SITE = {
     'projects.title': { hi: 'जो मैंने बनाया है', ur: 'جو میں نے بنایا ہے' },
     'projects.lead': { hi: 'कोड में लिखे प्रोजेक्ट, खोलने योग्य लिंक के साथ। हर एक में उपयोग हुई भाषाएँ और टूल दिए हैं।', ur: 'کوڈ میں لکھے پروجیکٹس، کھلنے والے لنکس کے ساتھ۔ ہر ایک میں استعمال ہونے والی زبانیں اور ٹولز درج ہیں۔' },
     'projects.stack': { en: 'Built with', hi: 'उपयोग हुआ', ur: 'استعمال ہوا' },
+    'certs.title': { hi: 'HackerRank प्रमाणपत्र', ur: 'HackerRank سرٹیفکیٹس' },
+    'certs.lead': { hi: 'तीन सत्यापित SQL प्रमाणपत्र। हर कार्ड HackerRank के सत्यापन पेज पर खुलता है।', ur: 'تین تصدیق شدہ SQL سرٹیفکیٹ۔ ہر کارڈ HackerRank کے تصدیقی صفحے پر کھلتا ہے۔' },
+    'certs.issuer': { en: 'HackerRank certificate', hi: 'HackerRank प्रमाणपत्र', ur: 'HackerRank سرٹیفکیٹ' },
+    'certs.verify': { en: 'Verify on HackerRank', hi: 'HackerRank पर सत्यापित करें', ur: 'HackerRank پر تصدیق کریں' },
 
     'skills.kicker': { hi: 'कौशल एटलस', ur: 'مہارتوں کا اٹلس' },
     'skills.title': { hi: 'मेरे कौशल, मज़बूती के क्रम में', ur: 'میری مہارتیں، مضبوطی کی ترتیب سے' },
     'skills.lead': {
-      hi: 'सबसे पहले C++, फिर Python, JavaScript और Java, फिर AI ट्रेनिंग और मेरे पढ़ाई के विषय। कोई एक चुनें और देखें कि उसमें क्या शामिल है और AI ट्रेनिंग में वह कहाँ काम आता है।',
-      ur: 'سب سے پہلے C++، پھر Python، JavaScript اور Java، پھر اے آئی ٹریننگ اور میری پڑھائی کے مضامین۔ کوئی ایک چنیں اور دیکھیں کہ اس میں کیا شامل ہے اور اے آئی ٹریننگ میں وہ کہاں کام آتا ہے۔'
+      hi: 'सबसे पहले C++, फिर SQL, Python, JavaScript और Java, फिर AI ट्रेनिंग और मेरे पढ़ाई के विषय। कोई एक चुनें और देखें कि उसमें क्या शामिल है और AI ट्रेनिंग में वह कहाँ काम आता है।',
+      ur: 'سب سے پہلے C++، پھر SQL، Python، JavaScript اور Java، پھر اے آئی ٹریننگ اور میری پڑھائی کے مضامین۔ کوئی ایک چنیں اور دیکھیں کہ اس میں کیا شامل ہے اور اے آئی ٹریننگ میں وہ کہاں کام آتا ہے۔'
     },
     'skills.mapTitle': { hi: 'B.A. पाठ्यक्रम मानचित्र, सेमेस्टर III–VI', ur: 'بی اے نصاب کا نقشہ، سمسٹر III–VI' },
     'skills.mapLead': { hi: 'पिछले दो वर्षों के सभी प्रश्नपत्र, सेमेस्टर के अनुसार। भूगोल के प्रश्नपत्रों में प्रायोगिक भी शामिल हैं।', ur: 'پچھلے دو سالوں کے تمام پرچے، سمسٹر کے لحاظ سے۔ جغرافیہ کے پرچوں میں پریکٹیکل بھی شامل ہیں۔' },
@@ -297,6 +301,27 @@ window.SITE = {
         en: 'Understanding how agent and robot software is written, reading step-by-step logic, and spotting where a plan or a program breaks first.',
         hi: 'यह समझना कि एजेंट और रोबोट सॉफ़्टवेयर कैसे लिखा जाता है, चरण-दर-चरण तर्क पढ़ना, और यह पकड़ना कि योजना या प्रोग्राम सबसे पहले कहाँ टूटता है।',
         ur: 'یہ سمجھنا کہ ایجنٹ اور روبوٹ سافٹ ویئر کیسے لکھا جاتا ہے، مرحلہ وار منطق پڑھنا، اور یہ پکڑنا کہ منصوبہ یا پروگرام سب سے پہلے کہاں ٹوٹتا ہے۔'
+      } },
+
+    { id: 'sql', k: 4,
+      name: { en: 'SQL', hi: 'SQL', ur: 'SQL' },
+      groups: [
+        { label: { en: 'SQL', hi: 'SQL', ur: 'SQL' },
+          items: {
+            en: ['SELECT, WHERE & ORDER BY', 'Aggregate functions & GROUP BY', 'HAVING & filtering groups', 'JOINs across tables', 'Subqueries', 'Window functions & CTEs', 'Problem solving on HackerRank'],
+            hi: ['SELECT, WHERE व ORDER BY', 'समुच्चय फ़ंक्शन व GROUP BY', 'HAVING और समूह फ़िल्टर', 'कई टेबल पर JOIN', 'सबक्वेरी', 'विंडो फ़ंक्शन व CTE', 'HackerRank पर समस्या-समाधान'],
+            ur: ['SELECT، WHERE اور ORDER BY', 'ایگریگیٹ فنکشن اور GROUP BY', 'HAVING اور گروپ فلٹر', 'کئی ٹیبلز پر JOIN', 'سب کوئری', 'ونڈو فنکشن اور CTE', 'HackerRank پر مسئلہ حل کرنا']
+          } }
+      ],
+      detail: {
+        en: 'I hold three HackerRank SQL certificates: SQL (Basic), SQL (Intermediate) and SQL (Advanced). I also solve SQL problems on HackerRank.',
+        hi: 'मेरे पास तीन HackerRank SQL प्रमाणपत्र हैं: SQL (Basic), SQL (Intermediate) और SQL (Advanced)। मैं HackerRank पर SQL की समस्याएँ भी हल करता हूँ।',
+        ur: 'میرے پاس HackerRank کے تین SQL سرٹیفکیٹ ہیں: SQL (Basic)، SQL (Intermediate) اور SQL (Advanced)۔ میں HackerRank پر SQL کے مسائل بھی حل کرتا ہوں۔'
+      },
+      use: {
+        en: 'Reading and checking data with precise queries, and bringing the same step-by-step care to a query that I bring to reviewing an AI answer.',
+        hi: 'सटीक क्वेरी से डेटा पढ़ना और जाँचना, और किसी क्वेरी में वही चरण-दर-चरण सावधानी लाना जो मैं AI उत्तर की समीक्षा में लाता हूँ।',
+        ur: 'درست کوئریز سے ڈیٹا پڑھنا اور جانچنا، اور کسی کوئری میں وہی مرحلہ وار احتیاط لانا جو میں اے آئی جواب کی جانچ میں لاتا ہوں۔'
       } },
 
     { id: 'py', k: 3,
@@ -622,6 +647,13 @@ window.SITE = {
     { name: 'Reddit', handle: 'u/Shaan_96', url: 'https://www.reddit.com/user/Shaan_96/', abbr: 'r/', color: '#d93a00' }
   ],
 
+  /* ------------------------------------------------------------------ certificates (verified on HackerRank) */
+  certs: [
+    { title: 'SQL (Basic)', url: 'https://www.hackerrank.com/certificates/e7bd3dc2dd94', k: 4 },
+    { title: 'SQL (Intermediate)', url: 'https://www.hackerrank.com/certificates/ce67f09474c5', k: 4 },
+    { title: 'SQL (Advanced)', url: 'https://www.hackerrank.com/certificates/479fa842b0ca', k: 4 }
+  ],
+
   /* ------------------------------------------------------------------ projects (shown in the Projects section) */
   projects: [
     { k: 1,
@@ -651,13 +683,13 @@ window.SITE = {
       ] },
     { k: 3,
       name: { en: 'Problem-solving practice', hi: 'समस्या-समाधान अभ्यास', ur: 'مسئلہ حل کرنے کی مشق' },
-      tag: { en: 'C++ on HackerRank and LeetCode', hi: 'HackerRank और LeetCode पर C++', ur: 'HackerRank اور LeetCode پر C++' },
+      tag: { en: 'C++ and SQL on HackerRank and LeetCode', hi: 'HackerRank और LeetCode पर C++ व SQL', ur: 'HackerRank اور LeetCode پر C++ اور SQL' },
       body: {
-        en: 'Regular practice in C++ on HackerRank and LeetCode: data structures, algorithms and the habit of checking a solution against edge cases. I use Kaggle for data work in Python.',
-        hi: 'HackerRank और LeetCode पर C++ में नियमित अभ्यास: डेटा स्ट्रक्चर, एल्गोरिद्म और हल को सीमांत मामलों पर जाँचने की आदत। Python में डेटा के काम के लिए मैं Kaggle इस्तेमाल करता हूँ।',
-        ur: 'HackerRank اور LeetCode پر C++ میں باقاعدہ مشق: ڈیٹا اسٹرکچر، الگورتھم اور حل کو انتہائی صورتوں پر جانچنے کی عادت۔ Python میں ڈیٹا کے کام کے لیے میں Kaggle استعمال کرتا ہوں۔'
+        en: 'Regular practice in C++ on HackerRank and LeetCode: data structures, algorithms and the habit of checking a solution against edge cases. On HackerRank I also solve SQL problems and hold three SQL certificates (Basic, Intermediate, Advanced). I use Kaggle for data work in Python.',
+        hi: 'HackerRank और LeetCode पर C++ में नियमित अभ्यास: डेटा स्ट्रक्चर, एल्गोरिद्म और हल को सीमांत मामलों पर जाँचने की आदत। HackerRank पर मैं SQL की समस्याएँ भी हल करता हूँ और मेरे पास तीन SQL प्रमाणपत्र हैं (Basic, Intermediate, Advanced)। Python में डेटा के काम के लिए मैं Kaggle इस्तेमाल करता हूँ।',
+        ur: 'HackerRank اور LeetCode پر C++ میں باقاعدہ مشق: ڈیٹا اسٹرکچر، الگورتھم اور حل کو انتہائی صورتوں پر جانچنے کی عادت۔ HackerRank پر میں SQL کے مسائل بھی حل کرتا ہوں اور میرے پاس تین SQL سرٹیفکیٹ ہیں (Basic، Intermediate، Advanced)۔ Python میں ڈیٹا کے کام کے لیے میں Kaggle استعمال کرتا ہوں۔'
       },
-      stack: ['C++', 'Data structures', 'Algorithms', 'Python', 'Kaggle'],
+      stack: ['C++', 'SQL', 'Data structures', 'Algorithms', 'Python', 'Kaggle'],
       links: [
         { label: { en: 'LeetCode', hi: 'LeetCode', ur: 'LeetCode' }, url: 'https://leetcode.com/u/Shaan_Sha/' },
         { label: { en: 'HackerRank', hi: 'HackerRank', ur: 'HackerRank' }, url: 'https://www.hackerrank.com/profile/shaankha81' },

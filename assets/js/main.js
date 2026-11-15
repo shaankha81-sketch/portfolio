@@ -381,12 +381,26 @@
     });
   }
 
+  /* ---------------- Certificates ---------------- */
+  function renderCerts() {
+    var host = $('#cert-grid');
+    host.textContent = '';
+    S.certs.forEach(function (c) {
+      host.appendChild(el('a', { class: 'card cert', href: c.url, target: '_blank', rel: 'noopener noreferrer', 'data-k': c.k }, [
+        el('span', { class: 'pill', text: t('certs.issuer') }),
+        el('h4', { class: 'ltr', text: c.title }),
+        el('span', { class: 'cert-go', text: t('certs.verify') + ' ↗' })
+      ]));
+    });
+  }
+
   renderAtlasTabs(); showAtlas(0);
   renderCourseMap();
   renderEducation();
   renderProfiles();
   renderProjects();
-  window.APP.onLang(function () { renderAtlasTabs(); showAtlas(atlasIdx); renderCourseMap(); renderEducation(); renderProjects(); });
+  renderCerts();
+  window.APP.onLang(function () { renderAtlasTabs(); showAtlas(atlasIdx); renderCourseMap(); renderEducation(); renderProjects(); renderCerts(); });
 
   /* ---------------- Contact ---------------- */
   var EMAIL = $('#email-link').textContent.trim();
