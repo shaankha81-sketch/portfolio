@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share preview, 1200 x 630</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@400&family=Noto+Nastaliq+Urdu:wght@400&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0d1416; }
+  body { position: relative; color: #ece5d8; font-family: "Inter", "Segoe UI", sans-serif; }
+  canvas { position: absolute; inset: 0; }
+  .logo { position: absolute; left: 80px; top: 62px; width: 96px; height: 96px; border-radius: 14px; background: #b4471c; display: grid; place-items: center; }
+  .coords { position: absolute; left: 80px; top: 200px; font: 400 23px "JetBrains Mono", Consolas, monospace; color: #a3ab9f; }
+  h1 { position: absolute; left: 80px; top: 232px; margin: 0; font: 700 112px/1.05 "Fraunces", Georgia, serif; letter-spacing: -.015em; color: #ece5d8; }
+  .role { position: absolute; left: 80px; top: 372px; font: 500 43px/1.2 "Fraunces", Georgia, serif; color: #f0895a; }
+  .chips { position: absolute; left: 80px; top: 450px; display: flex; gap: 12px; }
+  .chips span { padding: 8px 20px; border-radius: 999px; font: 600 30px/1.2 "JetBrains Mono", Consolas, monospace; color: #ece5d8; border: 2px solid #3b4d52; background: rgba(22, 34, 38, .85); }
+  .chips span.main { color: #0d1416; background: #f0895a; border-color: #f0895a; }
+  .langs { position: absolute; left: 80px; top: 520px; font: 400 27px "Inter", sans-serif; color: #a3ab9f; }
+  .url { position: absolute; left: 80px; top: 568px; font: 600 27px "JetBrains Mono", Consolas, monospace; color: #4fd1c5; }
+  .code { position: absolute; left: 748px; top: 214px; width: 384px; border-radius: 14px; overflow: hidden; background: #10181b; border: 1px solid #283a3e; border-top: 5px solid #f0895a; box-shadow: 0 18px 50px rgba(0, 0, 0, .55); }
+  .bar { display: flex; gap: 8px; align-items: center; padding: 12px 16px; background: #18242a; border-bottom: 1px solid #283a3e; font: 400 17px "JetBrains Mono", Consolas, monospace; color: #a3ab9f; }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #3b4d52; }
+  .bar b { margin-left: 8px; font-weight: 400; }
+  pre { margin: 0; padding: 16px 18px 14px; font: 400 19px/1.6 "JetBrains Mono", Consolas, monospace; color: #e6e1d6; }
+  .k { color: #f0895a; } .t { color: #5cc8ff; } .s { color: #a3d65c; } .p { color: #c9a6ff; } .c { color: #8a9a95; }
+  .out { padding: 11px 18px 15px; border-top: 1px dashed #283a3e; background: #0c1315; font: 600 18px "JetBrains Mono", Consolas, monospace; color: #a3d65c; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1200" height="630"></canvas>
+<div class="logo"><svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#fffdf8" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="12" rx="10" ry="7.5"/><ellipse cx="12" cy="12" rx="5.6" ry="3.6"/><circle cx="12" cy="12" r="1.5" fill="#fffdf8"/></svg></div>
+<div class="coords">27.22° N · 77.49° E — Bharatpur, Rajasthan</div>
+<h1>Shaan Khan</h1>
+<div class="role">Agentic &amp; Robotic AI Trainer</div>
+<div class="chips"><span class="main">C++</span><span>Python</span><span>JavaScript</span><span>Java</span></div>
+<div class="langs">English · हिन्दी · اردو</div>
+<div class="url">shaan.shaankha81.workers.dev</div>
+<div class="code">
+  <div class="bar"><i></i><i></i><i></i><b>robot_plan.cpp</b></div>
+<pre><span class="p">#include</span> <span class="s">&lt;iostream&gt;</span>
+<span class="t">int</span> firstBadStep(...) {
+  <span class="c">// stop at the first</span>
+  <span class="c">// step that cannot run</span>
+}
+<span class="t">int</span> main() { ... }</pre>
+  <div class="out">First wrong step: 2 (lift cup)</div>
+</div>
+<script>
+(function () {
+  var c = document.getElementById('c'), ctx = c.getContext('2d'), W = 1200, H = 630, cell = 12, z = 31.7;
+  function hash(x, y, zz) { var h = (Math.imul(x, 374761393) + Math.imul(y, 668265263) + Math.imul(zz, 1442695041)) | 0; h = Math.imul(h ^ (h >>> 13), 1274126177); h = h ^ (h >>> 16); return (h & 0xffff) / 0xffff; }
+  function fade(t) { return t * t * (3 - 2 * t); }
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function noise(x, y, zz) {
+    var xi = Math.floor(x), yi = Math.floor(y), zi = Math.floor(zz), xf = fade(x - xi), yf = fade(y - yi), zf = fade(zz - zi);
+    function plane(k) { return lerp(lerp(hash(xi, yi, k), hash(xi + 1, yi, k), xf), lerp(hash(xi, yi + 1, k), hash(xi + 1, yi + 1, k), xf), yf); }
+    return lerp(plane(zi), plane(zi + 1), zf);
+  }
+  function field(x, y) { return noise(x, y, z) * 0.6 + noise(x * 2.1, y * 2.1, z * 1.3) * 0.28 + noise(x * 4.3, y * 4.3, z) * 0.12; }
+  var cols = Math.ceil(W / cell) + 1, rows = Math.ceil(H / cell) + 1, v = new Float32Array(cols * rows), s = 1 / 190;
+  for (var j = 0; j < rows; j++) for (var i = 0; i < cols; i++) v[j * cols + i] = field(i * cell * s, j * cell * s);
+  function seg(a, b) { ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+  var levels = 16;
+  for (var lv = 1; lv < levels; lv++) {
+    var L = 0.12 + lv * (0.76 / levels), strong = lv % 4 === 0;
+    ctx.beginPath();
+    for (j = 0; j < rows - 1; j++) for (i = 0; i < cols - 1; i++) {
+      var tl = v[j * cols + i], tr = v[j * cols + i + 1], br = v[(j + 1) * cols + i + 1], bl = v[(j + 1) * cols + i];
+      var idx = (tl > L ? 8 : 0) | (tr > L ? 4 : 0) | (br > L ? 2 : 0) | (bl > L ? 1 : 0);
+      if (idx === 0 || idx === 15) continue;
+      var x0 = i * cell, y0 = j * cell;
+      var top = [x0 + cell * (L - tl) / (tr - tl), y0], right = [x0 + cell, y0 + cell * (L - tr) / (br - tr)];
+      var bottom = [x0 + cell * (L - bl) / (br - bl), y0 + cell], left = [x0, y0 + cell * (L - tl) / (bl - tl)];
+      switch (idx) {
+        case 1: case 14: seg(left, bottom); break; case 2: case 13: seg(bottom, right); break;
+        case 3: case 12: seg(left, right); break; case 4: case 11: seg(top, right); break;
+        case 5: seg(left, top); seg(bottom, right); break; case 6: case 9: seg(top, bottom); break;
+        case 7: case 8: seg(left, top); break; case 10: seg(left, bottom); seg(top, right); break;
+      }
+    }
+    ctx.strokeStyle = strong ? 'rgba(79,209,197,.30)' : 'rgba(79,209,197,.13)';
+    ctx.lineWidth = strong ? 1.6 : 1;
+    ctx.stroke();
+  }
+})();
+</script>
+</body>
+</html>
