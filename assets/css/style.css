@@ -397,7 +397,8 @@ p { margin: 0 0 1em; }
 :lang(ur) .proj-tag { letter-spacing: 0; }
 
 /* ---------- Certificates ---------- */
-.cert { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; border-top: 4px solid var(--k); color: var(--text); text-decoration: none; transition: transform .15s, border-color .15s; }
+#cert-grid { grid-template-columns: minmax(0, 560px); }
+.cert { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; border-top: 4px solid var(--k); color: var(--text); text-decoration: none; transition: transform .15s, border-color .15s; }
 .cert:hover { transform: translateY(-3px); border-color: var(--k); }
 .cert h4 { margin: 8px 0 0; font-size: 1.35rem; }
 .cert-go { margin-top: 4px; color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

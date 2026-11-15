@@ -100,9 +100,9 @@ window.SITE = {
     'projects.lead': { hi: 'कोड में लिखे प्रोजेक्ट, खोलने योग्य लिंक के साथ। हर एक में उपयोग हुई भाषाएँ और टूल दिए हैं।', ur: 'کوڈ میں لکھے پروجیکٹس، کھلنے والے لنکس کے ساتھ۔ ہر ایک میں استعمال ہونے والی زبانیں اور ٹولز درج ہیں۔' },
     'projects.stack': { en: 'Built with', hi: 'उपयोग हुआ', ur: 'استعمال ہوا' },
     'certs.title': { hi: 'HackerRank प्रमाणपत्र', ur: 'HackerRank سرٹیفکیٹس' },
-    'certs.lead': { hi: 'तीन सत्यापित SQL प्रमाणपत्र। हर कार्ड HackerRank के सत्यापन पेज पर खुलता है।', ur: 'تین تصدیق شدہ SQL سرٹیفکیٹ۔ ہر کارڈ HackerRank کے تصدیقی صفحے پر کھلتا ہے۔' },
-    'certs.issuer': { en: 'HackerRank certificate', hi: 'HackerRank प्रमाणपत्र', ur: 'HackerRank سرٹیفکیٹ' },
-    'certs.verify': { en: 'Verify on HackerRank', hi: 'HackerRank पर सत्यापित करें', ur: 'HackerRank پر تصدیق کریں' },
+    'certs.lead': { hi: 'तीन सत्यापित SQL प्रमाणपत्र, जो मेरी HackerRank प्रोफ़ाइल पर एक साथ दिखते हैं।', ur: 'تین تصدیق شدہ SQL سرٹیفکیٹ، جو میری HackerRank پروفائل پر ایک ساتھ نظر آتے ہیں۔' },
+    'certs.issuer': { en: 'HackerRank certificates', hi: 'HackerRank प्रमाणपत्र', ur: 'HackerRank سرٹیفکیٹس' },
+    'certs.verify': { en: 'See all three on HackerRank', hi: 'तीनों HackerRank पर देखें', ur: 'تینوں HackerRank پر دیکھیں' },
 
     'skills.kicker': { hi: 'कौशल एटलस', ur: 'مہارتوں کا اٹلس' },
     'skills.title': { hi: 'मेरे कौशल, मज़बूती के क्रम में', ur: 'میری مہارتیں، مضبوطی کی ترتیب سے' },
@@ -647,12 +647,12 @@ window.SITE = {
     { name: 'Reddit', handle: 'u/Shaan_96', url: 'https://www.reddit.com/user/Shaan_96/', abbr: 'r/', color: '#d93a00' }
   ],
 
-  /* ------------------------------------------------------------------ certificates (verified on HackerRank) */
-  certs: [
-    { title: 'SQL (Basic)', url: 'https://www.hackerrank.com/certificates/e7bd3dc2dd94', k: 4 },
-    { title: 'SQL (Intermediate)', url: 'https://www.hackerrank.com/certificates/ce67f09474c5', k: 4 },
-    { title: 'SQL (Advanced)', url: 'https://www.hackerrank.com/certificates/479fa842b0ca', k: 4 }
-  ],
+  /* ------------------------------------------------------------------ certificates: one link, the HackerRank profile shows all three together */
+  certs: {
+    url: 'https://www.hackerrank.com/profile/shaankha81',
+    k: 4,
+    levels: ['SQL (Basic)', 'SQL (Intermediate)', 'SQL (Advanced)']
+  },
 
   /* ------------------------------------------------------------------ projects (shown in the Projects section) */
   projects: [

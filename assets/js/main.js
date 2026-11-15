@@ -385,13 +385,12 @@
   function renderCerts() {
     var host = $('#cert-grid');
     host.textContent = '';
-    S.certs.forEach(function (c) {
-      host.appendChild(el('a', { class: 'card cert', href: c.url, target: '_blank', rel: 'noopener noreferrer', 'data-k': c.k }, [
-        el('span', { class: 'pill', text: t('certs.issuer') }),
-        el('h4', { class: 'ltr', text: c.title }),
-        el('span', { class: 'cert-go', text: t('certs.verify') + ' ↗' })
-      ]));
-    });
+    var c = S.certs;
+    host.appendChild(el('a', { class: 'card cert', href: c.url, target: '_blank', rel: 'noopener noreferrer', 'data-k': c.k }, [
+      el('span', { class: 'pill', text: t('certs.issuer') }),
+      el('ul', { class: 'chips ltr' }, c.levels.map(function (x) { return el('li', { text: x }); })),
+      el('span', { class: 'cert-go', text: t('certs.verify') + ' ↗' })
+    ]));
   }
 
   renderAtlasTabs(); showAtlas(0);
